@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>CSS3 3D Transform - Hongkiat.com</title>
+
+<!--  jquery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../_nav/js/jquery.js"><\/script>')</script>
+
+<!-- demo scripts -->
+<link rel="stylesheet" href="css/style.css">
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$('a.flip').click(function(event){
+		$('.passbook').toggleClass('rotate-3d');
+		event.preventDefault();
+	});
+});
+</script>
+
+<!-- nav script -->
+<script src="../_nav/js/nav.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<!-- nav meta -->
+<div class="demo-meta">
+  <h1 class="demo-title">CSS3 3D Transform</h1>
+  <p class="demo-desc">This demo shows a flipping card effect that similar to one on the OSX. This demo shows how this effect can be achieved with CSS3 Transforms.</p>
+</div>
+
+<!-- demo content -->
+<div class="wrapper">
+
+<h1>3D Transforms</h1>
+<section class="rotate-x">
+<h3>3D Rotate X</h3>
+	<div class="box">
+		<p>Hello World!</p>
+	</div>
+<pre>
+.box {
+	-webkit-transform: rotateX(180deg);
+	-moz-transform: rotateX(180deg);
+	transform: rotateX(180deg);
+}
+</pre>
+</section>
+
+<h3>3D Rotate Y</h3>
+<section class="rotate-y">
+	<div class="box">
+		<p>Hello World!</p>
+	</div>
+<pre>
+.box {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+</pre>
+</section>
+
+<h3>Passbook Flip</h3>
+<section class="passbook">
+	<div class="card front">
+		<img src="img/starbuck-front.png">
+		<a href="#" class="info flip">i</a>
+	</div>
+	<div class="card back">
+		<ul class="nav">
+			<li class="title">Starbuck Coffee</li>
+			<li class="button done"><a class="flip" href="#">Done</a></li>
+		</ul>
+		<img src="img/starbuck-back.png">
+	</div>
+</section>
+</div>
+
+</body>
+</html>
